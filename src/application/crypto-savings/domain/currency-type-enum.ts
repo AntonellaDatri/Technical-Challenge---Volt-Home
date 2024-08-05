@@ -1,0 +1,17 @@
+export enum CurrencyTypeEnum {
+    USD = 'USD',
+    ARS = 'ARS',
+    USDT = 'USDT',
+    BTC = 'BTC',
+    ETH = 'ETH',
+    XRP = 'XRP',
+    ADA = 'ADA',
+    LTC = 'LTC',
+    BCH = 'BCH',
+    DOT = 'DOT',
+    BNB = 'BNB',
+    SOL = 'SOL',
+    DOGE = 'DOGE',
+    AVAX = 'AVAX',
+    MATIC = 'MATIC',
+}
