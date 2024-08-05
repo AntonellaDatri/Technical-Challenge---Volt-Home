@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "c0acb433-d8bc-4602-a598-f46dd1f0509c",
+		"name": "volt-home-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11468233"
+	},
+	"item": [
+		{
+			"name": "Buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerCvu\": \"12345678901234567890\",\r\n    \"operationType\": \"BUY\",\r\n    \"tradingCurrency\": {\r\n        \"amount\": 2,\r\n        \"type\": \"BTC\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"ownerCvu\": \"12345678901234567890\",\r\n    \"operationType\": \"SELL\",\r\n    \"tradingCurrency\": {\r\n        \"amount\": 1,\r\n        \"type\": \"LTC\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Portfolio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/portfolio?cvu=12345678901234567890&currency=BTC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"portfolio"
+					],
+					"query": [
+						{
+							"key": "cvu",
+							"value": "12345678901234567890"
+						},
+						{
+							"key": "currency",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cvu\":\"98765432101234567890\",\r\n    \"tradingCurrency\": {\"type\": \"USD\", \"amount\": 500000000}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/wallet/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"wallet",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet extract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cvu\":\"98765432101234567890\",\r\n    \"tradingCurrency\": {\"type\": \"USD\", \"amount\": 5}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/wallet/extract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"wallet",
+						"extract"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
