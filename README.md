@@ -2,7 +2,7 @@
 
 Para poder correr la aplicacion es necesario:
 
-- guardar el archivo .env dentro del root del proyecto
+- configurar el .env (instrucciones en [env.md](env.md))
 - asegurarse de estar corriendo Docker desde la computadora en la que se correra el proyecto
 - ejecutar el comando npm run docker:deploy para crear y ejecutar el proyecto
 
